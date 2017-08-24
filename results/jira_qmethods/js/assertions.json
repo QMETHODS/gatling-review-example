@@ -1,0 +1,10 @@
+{
+  "simulation": "jira_qmethods.jira_qmethods",
+  "simulationId": "jira-qmethods",
+  "start": 1503579280400,
+  "description": "",
+  "scenarios": ["Beispiel_Jira", "Beispiel_Jira_Peak"],
+  "assertions": [
+
+  ]
+}
