@@ -52,11 +52,13 @@ class jira_qmethods extends Simulation {
 				.post("/secure/QuickSearch.jspa")
 				.formParam("searchString", "Gatling")
 				.check(status.is(200)))
-		
-		.exec(http("Suche verifizieren")
-			.get("""/browse/QI-627?jql=text%20~%20"gatling"""")
-			.check(regex("Vorgang erstellen")))}
-			.pause(1)
+			
+	// Die Suche wird hierbei doppelt ausgeführt. Dies dient nur zur Demonstration zur Verifizierung via RegEx!
+			
+			.exec(http("Suche verifizieren")
+				.get("""/browse/QI-627?jql=text%20~%20"gatling"""")
+				.check(regex("Vorgang erstellen")))}
+				.pause(1)
 	}
 
 	val Logout = 
